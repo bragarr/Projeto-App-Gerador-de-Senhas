@@ -1,0 +1,1 @@
+const qtdCaracteres = 10;

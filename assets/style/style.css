@@ -1,0 +1,31 @@
+:root {
+    --cor-fundo-padrao: #1F2937;
+    --cor-fonte-padrao: #E5E7EB;
+}
+
+@font-face {
+    font-family: 'Roboto black', sans-serif;
+    src: url(/assets/font/Roboto-Black.ttf);
+    font-weight: bolder;
+}
+
+* {
+    margin: 0 0 0 0;
+    font-family: 'Roboto black';
+}
+
+.box__gerador--senhas {
+    text-align: center;
+}
+
+.formulario_opcoes--senha {
+    display: inline-block;
+    background-color: var(--cor-fundo-padrao);
+    color: var(--cor-fonte-padrao);
+    text-align: left;
+}
+
+.container__opcoes {
+    display: flex;
+    flex-direction: column;
+}

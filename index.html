@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/style/style.css">
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <header class="cabecalho__principal">
+        </header>
+        <main>
+            <section class="container__gerador--senhas">
+                <div class="box__gerador--senhas">
+                    <p class="titulo__app">Password Genarator</p>
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <input type="range">
+                    </div>
+                    <form class="formulario_opcoes--senha">
+                        <div class="container__opcoes">
+                            <label for="maicusculas"><input type="checkbox" id="maiusculas" class="select__opcao">Incluir Letras Maíusculas</label>
+                            <label for="minusculas"><input type="checkbox" id="minusculas" class="select__opcao">Incluir Letras Minusculas</label>
+                            <label for="numeros"><input type="checkbox" id="numeros" class="select__opcao">Incluir números</label>
+                            <label for="simbolos"><input type="checkbox" id="simbolos" class="select__opcao">Incluir Símbolos</label>
+                        </div>
+                    </form>
+                    <div>
+                        <p>Força da senha</p>
+                    </div>
+                    <button>Gerar senha</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

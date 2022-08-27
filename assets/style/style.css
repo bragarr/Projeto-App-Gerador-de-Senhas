@@ -14,8 +14,34 @@
     font-family: 'Roboto black';
 }
 
+.introducao {
+    text-align: center;
+}
+
+.imagem {
+    width: 640px;
+}
+
 .box__gerador--senhas {
     text-align: center;
+    background-color: aqua;
+    margin: 150px 650px;
+}
+
+.texto__descricao {
+    display: inline-block;
+}
+
+.representacao__numerica--quantidade__senha {
+    display: inline-block;
+}
+
+.configuracao__tamanho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 30px;
+    font-size: 1em;
 }
 
 .formulario_opcoes--senha {

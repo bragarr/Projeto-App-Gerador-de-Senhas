@@ -1,31 +1,73 @@
 :root {
-    --cor-fundo-padrao: #1F2937;
+    --cor-fundo-padrao: #dda509;
     --cor-fonte-padrao: #E5E7EB;
+    --fundo-app: #304F5F;
+    --cor-nivel-max: rgb(4, 68, 4);
+    --cor-nivel-med: #949411;
+    --cor-nivel-wk: #5a0606;
 }
 
 @font-face {
-    font-family: 'Roboto black', sans-serif;
-    src: url(/assets/font/Roboto-Black.ttf);
+    font-family: 'Roboto';
+    src: url(/assets/font/Roboto-Regular.ttf) format('truetype');
     font-weight: bolder;
 }
 
 * {
-    margin: 0 0 0 0;
-    font-family: 'Roboto black';
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    background-color: var(--fundo-app);
 }
 
 .introducao {
     text-align: center;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 .imagem {
-    width: 640px;
+    width: 1080px;
+    background-color: black;
 }
 
-.box__gerador--senhas {
+.apresentacao__aplicativo {
+    display: flex;
+    justify-content: center;
+}
+
+
+.container__gerador--senhas {
     text-align: center;
-    background-color: aqua;
-    margin: 150px 650px;
+    background-color: var(--cor-fundo-padrao);
+    color: var(--cor-fonte-padrao);
+}
+
+.titulo__app {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.tela__impressao--copia__senha {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.tela__impressao {
+    font-size: 20px;
+    text-align: left;
+}
+
+.simbolo__copiar {
+    width: 2%;
+}
+
+.configuracao__tamanho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px 30px;
+    font-size: 1em;
 }
 
 .texto__descricao {
@@ -36,13 +78,10 @@
     display: inline-block;
 }
 
-.configuracao__tamanho {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 30px;
-    font-size: 1em;
+.barra__rolamento {
+    display: block;
 }
+
 
 .formulario_opcoes--senha {
     display: inline-block;
@@ -54,4 +93,44 @@
 .container__opcoes {
     display: flex;
     flex-direction: column;
+}
+
+.texto__forca--senha {
+    background-color: var(--cor-fundo-padrao);
+}
+
+label {
+    background-color: var(--cor-fundo-padrao);
+}
+
+.container__forca--senha {
+    margin: 10px 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-fundo-padrao);
+}
+
+.container__nivel--senha {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cor-fundo-padrao);
+    
+}
+
+.sinal__forca--senha {
+    padding: 10px 5px;
+    background-color: var(--cor-nivel-max);
+    cursor: pointer;
+    list-style-type: none;
+    margin: 6px 2px;
+}
+
+button {
+    background-color: var(--cor-fundo-padrao);
+}
+
+footer {
+    text-align: center;
 }

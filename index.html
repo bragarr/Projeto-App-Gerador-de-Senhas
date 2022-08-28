@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/style/reset.css">
         <link rel="stylesheet" href="./assets/style/style.css">
         <title>Password Generator</title>
     </head>
@@ -12,33 +13,42 @@
         </header>
         <main>
             <section class="introducao">
-                <p>Este será um website apresentando um gerador de senhas</p>
-                <img src="./assets/img/malenia,-blade-of-miquella.jpg"alt="foto de Malenia - Personagem Jogo Elden Ring" class="imagem">
             </section>
-            <section class="container__gerador--senhas">
-                <div class="box__gerador--senhas">
-                    <p class="titulo__app">Password Genarator</p>
-                    <input type="text" id="tela" class="tela__aplicativo">
-                    <div class="configuracao__tamanho">
-                        <p class="texto__descricao--selecao">Tamanho senha</p>
-                        <p class="representacao__numerica--quantidade__senha">10</p>
-                    </div>
-                    <span>
-                        <input type="range" id="quantidade__caracteres" class="selecao__quantidade--caracteres">
-                    </span>
-                    <form class="formulario_opcoes--senha">
-                        <div class="container__opcoes">
-                            <label for="maicusculas"><input type="checkbox" id="maiusculas" class="select__opcao">Incluir Letras Maíusculas</label>
-                            <label for="minusculas"><input type="checkbox" id="minusculas" class="select__opcao">Incluir Letras Minusculas</label>
-                            <label for="numeros"><input type="checkbox" id="numeros" class="select__opcao">Incluir números</label>
-                            <label for="simbolos"><input type="checkbox" id="simbolos" class="select__opcao">Incluir Símbolos</label>
+            <section class="apresentacao__aplicativo">
+                <aside class="texto__apresentacao">
+                </aside>
+                <article class="container__gerador--senhas">
+                        <p class="titulo__app">Password Genarator</p>
+                        <div class="tela__impressao--copia__senha">
+                            <input type="text" id="tela" class="tela__impressao">
                         </div>
-                    </form>select__opcao
-                    <div>
-                        <p>Força da Senha</p>
-                    </div>
-                    <button>Gerar senha</button>
-                </div>
+                        <div class="configuracao__tamanho">
+                            <p class="texto__descricao--selecao">Tamanho senha</p>
+                            <p class="representacao__numerica--quantidade__senha">10</p>
+                        </div>
+                        <span class="barra__rolamento">
+                            <input type="range" id="quantidade__caracteres" class="selecao__quantidade--caracteres">
+                        </span>
+                        <form class="formulario_opcoes--senha">
+                            <div class="container__opcoes">
+                                <label for="maicusculas"><input type="checkbox" id="maiusculas" class="select__opcao">Incluir Letras Maíusculas</label>
+                                <label for="minusculas"><input type="checkbox" id="minusculas" class="select__opcao">Incluir Letras Minusculas</label>
+                                <label for="numeros"><input type="checkbox" id="numeros" class="select__opcao">Incluir números</label>
+                                <label for="simbolos"><input type="checkbox" id="simbolos" class="select__opcao">Incluir Símbolos</label>
+                            </div>
+                        </form>
+                        <div class="container__forca--senha">
+                            <p class="texto__forca--senha">Força da Senha</p>
+                            <ul class="container__nivel--senha">
+                                <li class="sinal__forca--senha"></li>
+                                <li class="sinal__forca--senha"></li>
+                                <li class="sinal__forca--senha"></li>
+                                <li class="sinal__forca--senha"></li>
+                                <li class="sinal__forca--senha"></li>
+                            </ul>
+                        </div>
+                        <button>Gerar senha</button>
+                </article>
             </section>
         </main>
         <footer>

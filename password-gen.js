@@ -1,49 +1,74 @@
-const simbolos = "!#$%&*+-/<>?@[]^~";
-const letrasUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-const letrasLow = "abcdefghijklmnopqrstuvwxyz"
-const numbers = "1234567890";
-const tamanhoSenha = 10;
-
-let checkbox = document.querySelector();
-
-if(checkbox.checked) {
-    console.log("O cliente marcou o checkbox");
-} else {
-    console.log("O cliente não marcou o checkbox");
-}
-
-const caracteres = [simbolos, letrasUpper, letrasLow, numbers];
-
-const formacaoUsuario = caracteres[1] + caracteres[3];
-
-console.log(formacaoUsuario);
-
-
-
+const tamanhoSenha = (document.getElementById('qty').innerHTML)*1;
+const botaoGeraSenha = document.querySelector('button');
+const telaAplicativo = document.getElementById('tela');
+const grupoCaracteres = document.querySelectorAll(".grupo__caracteres");
+const grupoCaracteresGerarSenha = [];
+let senhaUsuario = "";
 const formacaoSenha = [
     {
-        conteudo: "!#$%&*+-/<>?@[]^~"
+        caracteres: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     },
     {
-        conteudo: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        caracteres: "abcdefghijklmnopqrstuvwxyz"
     },
     {
-        conteudo: "abcdefghijklmnopqrstuvwxyz"
+        caracteres: "0123456789"
     },
     {
-        conteudo: "0123456789"
+        caracteres: "!#$%&*+-/<>?@[]^~"
     }
 ]
+const checkMaiusculas = document.getElementById("maiusculas");
+const checkMinusculas = document.getElementById("minusculas");
+const checkNumeros = document.getElementById("numeros");
+const checkSimbolos = document.getElementById("simbolos");
 
-let senhaUsuario = "";
+
+function opcaoSelecionadaPeloUsuario() {
+    
+}
+
+
+function verificacaoSelecaoUsuario() {
+    grupoCaracteres.forEach(grupo => {
+        if(grupo.checked) {
+            grupoCaracteresGerarSenha.push((grupo.value)*1);
+        }
+    });
+}
 
 function gerarSenha() {
-    for(let i=0; senhaUsuario.length < tamanhoSenha; i++) {
-        let j = Math.floor(Math.random()*4)
-        senhaUsuario += formacaoSenha[j].conteudo[Math.floor(Math.random()*formacaoSenha[j].conteudo.length)]
+    if(grupoCaracteresGerarSenha != "") {
+        for(let i=0; senhaUsuario.length < tamanhoSenha; i++) {
+            let j = Math.floor(Math.random()*formacaoSenha.length);
+            if(grupoCaracteresGerarSenha.includes(j)) {
+                let caracterAleatorio = formacaoSenha[j].caracteres[Math.floor(Math.random()*formacaoSenha[j].caracteres.length)];
+                if(senhaUsuario.includes(caracterAleatorio)) {
+                    senhaUsuario = senhaUsuario;
+                } else {
+                    senhaUsuario += caracterAleatorio;
+                }
+            } else {
+                continue;
+            } 
+        }
+    } else {
+        alert("Operação Inválida! Por favor selecione ao menos um grupo de caracteres!");
     }
 }
 
-gerarSenha();
+function executaAplicativo() {
+    botaoGeraSenha.addEventListener("click", function() {
+        limpaTela();
+        gerarSenha();
+        telaAplicativo.value = senhaUsuario;
+    })
+}
 
-console.log(senhaUsuario)
+function limpaTela() {
+    telaAplicativo.value = "";
+    senhaUsuario = "";
+}
+
+verificacaoSelecaoUsuario();
+executaAplicativo();

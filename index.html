@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/style/reset.css">
         <link rel="stylesheet" href="./assets/style/style.css">
-        <scrip src="password-gen.js" defer></scrip>
+        <script src="password-gen.js" defer></script>
         <title>Password Generator</title>
     </head>
     <body>
@@ -19,14 +19,14 @@
                 <aside class="texto__apresentacao">
                 </aside>
                 <article class="container__gerador--senhas">
-                        <p class="titulo__app">Password Genarator</p>
+                        <p class="titulo__app">Gerador de Senhas</p>
                         <div class="tela__impressao--copia__senha">
                             <input type="text" id="tela" class="tela__impressao">
                         </div>
                         <div class="tamanho__rolamento">
                             <div class="configuracao__tamanho">
-                                <p class="texto__descricao--selecao">Quantidade de Caracteres</p>
-                                <p class="representacao__numerica--quantidade__senha">10</p>
+                                <p class="texto__descricao--selecao">Tamanho Senha</p>
+                                <p class="representacao__numerica--quantidade__senha" id="qty">10</p>
                             </div>
                             <span class="barra__rolamento">
                                 <input type="range" id="quantidade__caracteres" class="selecao__quantidade--caracteres">
@@ -34,10 +34,22 @@
                         </div>    
                         <form class="formulario_opcoes--senha">
                             <div class="container__opcoes">
-                                <label for="maicusculas" class="select__opcao"><input type="checkbox" id="maiusculas">Incluir Letras Maíusculas</label>
-                                <label for="minusculas" class="select__opcao"><input type="checkbox" id="minusculas">Incluir Letras Minusculas</label>
-                                <label for="numeros" class="select__opcao"><input type="checkbox" id="numeros">Incluir Números</label>
-                                <label for="simbolos" class="select__opcao"><input type="checkbox" id="simbolos">Incluir Símbolos</label>
+                                <label for="maicusculas" class="select__opcao">
+                                    <input type="checkbox" id="maiusculas" class="grupo__caracteres" value="0">
+                                    Incluir Letras Maíusculas
+                                </label>
+                                <label for="minusculas" class="select__opcao">
+                                    <input type="checkbox" id="minusculas" class="grupo__caracteres" value="1">
+                                    Incluir Letras Minusculas
+                                </label>
+                                <label for="numeros" class="select__opcao">
+                                    <input type="checkbox" id="numeros" class="grupo__caracteres" value="2">
+                                    Incluir Números
+                                </label>
+                                <label for="simbolos" class="select__opcao">
+                                    <input type="checkbox" id="simbolos" class="grupo__caracteres" value="3">
+                                    Incluir Símbolos
+                                </label>
                             </div>
                         </form>
                         <div class="container__forca--senha">

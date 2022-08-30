@@ -11,8 +11,11 @@ Objetivo deste Projeto
 O Principal objetivo deste projeto é criar um aplicativo que possui como principal funcionalidade a criação de senhas considerando a utilização de 4 diferentes fatores:
 
 *Letras Maiúsculas
+
 *Letras Minúsculas
+
 *Números
+
 *Símbolos
 
 A funcionalidade deste projeto é ampla e útil para o público geral com fins de criação de senhas complexas ou combinação de acordo e fins que o usuário assim desejar.

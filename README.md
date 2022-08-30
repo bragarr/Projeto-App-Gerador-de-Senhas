@@ -22,7 +22,9 @@ Desafios:
 Os principais desafios a serem encarados neste projetos foram:
 
 *Lógica de Programação para formação de senhas,
-*Manipulação de Flexbox para criação de container para o aplicativo,
+
+*Manipulação de Flexbox para criação de container para o aplicativo
+
 *Manipulação de DOM
 
 Modo de Uso:

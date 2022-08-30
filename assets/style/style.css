@@ -1,44 +1,55 @@
 :root {
     --cor-fundo-padrao: #dda509cc;
     --cor-fonte-padrao: #E5E7EB;
-    --fundo-app: #1e2020;
+    --fundo-app: #747475;
     --fundo-alternativo: #dda509;
     --fundo-contraste: #0e0d0d;
-    --cor-nivel-max: rgb(4, 68, 4);
-    --cor-nivel-med: #949411;
-    --cor-nivel-wk: #5a0606;
+    --fundo-website: #000000;
+    --fundo-app-alternativo: #3d3a3a;
 }
-
-@font-face {
-    font-family: 'courier';
-    src: url(../font/CourierPrime-Regular.ttf) format('truetype');
-}
-
 
 * {
-    font-family: 'courier', sans-serif;
+    font-family: 'arial', sans-serif;
+    background-color: var(--fundo-website);
 }
 
-.introducao {
+.cabecalho__principal {
+    color: var(--cor-fonte-padrao);
+    font-weight: 700;
+    font-size: 20px;
     text-align: center;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    font-family: 'arial', sans-serif;
+    background-color: var(--fundo-app);
+    padding: 30px 40px;
+
+}
+
+.titulo__cabecalho {
+    background-color: var(--fundo-app);
 }
 
 .imagem {
-    width: 1080px;
+    width: 480px;
+    padding: 20px 0;
 }
 
 .apresentacao__aplicativo {
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
+    align-items: center;
 }
 
+.texto__apresentacao {
+    color: var(--cor-fonte-padrao);
+    margin: 100px 60px;
+}
 
 .container__gerador--senhas {
     text-align: center;
-    background-color: var(--fundo-app);
+    background-color: var(--fundo-app-alternativo);
     color: var(--cor-fonte-padrao);
+    border: 1px solid var(--fundo-alternativo);
+    margin: 100px 160px;
 }
 
 .titulo__app {
@@ -48,23 +59,36 @@
     color: var(--fundo-alternativo);
 }
 
+.tela__impressao--copia__senha {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#icone__copiar {
+    background-color: var(--fundo-contraste);
+    margin: 15px 0;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
 .tela__impressao {
-    font-size: 16px;
     text-align: center;
-    margin: 20px 40px;
+    width: 250px;
+    padding: 15px 25px;
+    margin: 15px 0;
+    font-size: 16px;
     color: var(--cor-nivel-med);
     background-color: var(--fundo-contraste);
     border: none;
-    user-select: none;
-    padding: 15px 60px;
-    
+    box-shadow: none;
+    outline: none;
 }
 
 .tamanho__rolamento {
-    padding: 30px 10px;
-    background-color: var(--fundo-contraste);
+    padding: 10px;
+    background-color: var(--fundo-website);
     color: var(--fundo-alternativo);
-    margin: 0 40px;
 }
 
 .configuracao__tamanho {
@@ -78,8 +102,9 @@
 }
 
 .barra__rolamento {
-    padding-top: 30px;
+    padding: 30px 0;
     display: block;
+    margin: 0;
 }
 
 .selecao__quantidade--caracteres {
@@ -103,14 +128,13 @@
 
 .formulario_opcoes--senha {
     text-align: left;
-    padding: 20px 10px;
-    margin: 0 26px;
+    background-color: var(--fundo-app);
 }
 
 .container__opcoes {
     display: flex;
     flex-direction: column;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--fundo-alternativo);
 }
@@ -122,6 +146,7 @@
 label input {
     vertical-align: middle;
     cursor: pointer;
+    accent-color: var(--fundo-alternativo);
 }
 
 .container__forca--senha {
@@ -131,29 +156,19 @@ label input {
     align-items: center;
     padding: 20px 10px;
     background-color: var(--fundo-contraste);
-    margin: 0 40px;
 }
 
 .texto__forca--senha {
-    font-size: 15px;
+    font-size: 12px;
     color: var(--fundo-alternativo);
+    background-color: var(--fundo-contraste);
 }
 
-.container__nivel--senha {
-    display: flex;
-    flex-direction: row;
-}
 
-.sinal__forca {
-    padding: 10px 8px;
-    background-color: var(--cor-fonte-padrao);
-    cursor: pointer;
-    list-style-type: none;
-    margin: 6px 6px;
-}
-
-.desligado {
-    background-color: var(--cor-fonte-padrao);
+.nivel__forca {
+    color: var(--fundo-alternativo);
+    background-color: var(--fundo-contraste);
+    font-size: 12px;
 }
 
 .area__botao {
@@ -164,7 +179,65 @@ label input {
     width: 240px;
     height: 40px;
     cursor: pointer;
-    background-color: var(--fundo-app);
+    background-color: var(--fundo-website);
     color: var(--fundo-alternativo);
     border: 2px solid var(--fundo-alternativo);
+}
+
+.aviso {
+    text-align: center;
+    color: var(--cor-fonte-padrao);
+}
+
+.rodape {
+    margin: 0 0 0 0;
+    font-family: 'arial', sans-serif;
+}
+
+.texto__rodape {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding: 5em 0px;
+    color: var(--fundo-alternativo);
+}
+
+.link__externo {
+    color: var(--fundo-alternativo);
+}
+
+.link__externo:hover {
+    color: var(--fundo-alternativo);
+    font-size: large;
+    transition: 400ms;
+}
+
+@media screen and (max-width:480px) {
+    .titulo__cabecalho {
+        font-size: 16px;
+    }
+
+    .apresentacao__aplicativo {
+        display: block;
+    }
+
+    .texto__apresentacao {
+        display: block;
+        margin: 30px 20px;
+    }
+    
+    .container__gerador--senhas {
+        margin: 10px 20px;
+    }
+
+    .aviso {
+        margin: 10px 0;
+    }
+
+    .texto__rodape {
+        padding: 2em 0;
+        text-align: center;
+    }
 }

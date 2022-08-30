@@ -7,21 +7,46 @@
         <link rel="stylesheet" href="./assets/style/reset.css">
         <link rel="stylesheet" href="./assets/style/style.css">
         <script src="password-gen.js" defer></script>
-        <title>Criador de Senhas</title>
+        <title>CRIADOR DE SENHAS</title>
     </head>
     <body>
         <header class="cabecalho__principal">
+            <h1 class="titulo__cabecalho">APLICATIVO PARA CRIAÇÃO DE SENHAS </h1>
         </header>
         <main>
-            <section class="introducao">
-            </section>
             <section class="apresentacao__aplicativo">
                 <aside class="texto__apresentacao">
+                    <p>
+                        Olá Seja Muito Bem Vindo! Aqui você pode construir uma senha seguindo as principais medidas indicadas em termos de segurança.
+                    </p>
+                    <p>
+                        Além disso, você também utilizar para gerar uma sequência de números e letras para outros fins de sua escolha.
+                    </p>
+                    <br>
+                    <h2>Modo de Uso</h2>
+                    <br>
+                    <p>
+                        Para utilizar este aplicativo, você deve no mínimo selecionar uma das opções de caracteres disponiveis
+                        conforme lista:
+                    </p>
+                    <br>
+                    <ul>
+                        <li>*Letras Maiúsculas*</li>
+                        <li>*Letras Minúsculas*</li>
+                        <li>*Números*</li>
+                        <li>*Símbolos*</li>
+                    </ul>
+                    <br>
+                    <P>Após selecionar os tipos de caracteres, você conseguirá regular o tamanho da senha através da barra de rolamento. Você pode definir uma senha de 4 até 20 caracteres.</P>
+                    <br>
+                    <P>E para facilitar, ao lado da tela onde a senha é gerada, há um botão para que você possa copiar e salvar a senha em um local seguro.</P>
+
                 </aside>
                 <article class="container__gerador--senhas">
                         <p class="titulo__app">CRIADOR DE SENHA</p>
                         <div class="tela__impressao--copia__senha">
-                            <input type="text" id="tela" class="tela__impressao" required placeholder="Aqui será criada a sua senha!">
+                            <input type="text" id="tela" class="tela__impressao" required placeholder="Aqui será criada a senha">
+                            <img src="./assets/img/icone.png" alt="icone de copiar" id="icone__copiar">
                         </div>
                         <div class="tamanho__rolamento">
                             <div class="configuracao__tamanho">
@@ -54,20 +79,26 @@
                         </form>
                         <div class="container__forca--senha">
                             <p class="texto__forca--senha">SEGURANÇA</p>
-                            <ul class="container__nivel--senha">
-                                <li class="sinal__forca"></li>
-                                <li class="sinal__forca"></li>
-                                <li class="sinal__forca"></li>
-                                <li class="sinal__forca"></li>
-                            </ul>
+                            <p class="nivel__forca" id="intensidade__senha">-</p>
                         </div>
                         <div class="area__botao">
                             <button class="botao">CRIAR</button>
                         </div>
                 </article>
             </section>
+            <section class="aviso">
+                <p>
+                    A avaliação da complexidade da senha é calculada através de método próprio, sem utilizar fórmulas ou instruções 
+                    de organizações, RFCs e similares. Esta aplicação não é perfeita e deve ser utilizada apenas como um guia para melhorar a complexidade de senhas.
+                </p>
+            </section>
         </main>
-        <footer>
+        <footer class="rodape">
+            <p class="texto__rodape">
+                Para mais informações, 
+                por favor verifique meu perfil no GitHub clicando no meu nome :)
+                <a href="https://github.com/bragarr" target="_blank" rel="noopener noreferrer" class="link__externo">GitHub - Reinaldo Braga</a>
+            </p>
         </footer>
     </body>
 </html>

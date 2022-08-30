@@ -2,6 +2,8 @@
 
 Abaixo você consegue conferir o link e video de demonstração deste projeto
 
+https://bragarr.github.io/Projeto-App-Gerador-de-Senhas/
+
 https://user-images.githubusercontent.com/108424896/187552367-0891c925-f2f0-4f23-a0c4-990ab224e234.mp4
 
 Objetivo deste Projeto

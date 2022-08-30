@@ -1,4 +1,3 @@
-const tamanhoSenha = (document.getElementById('qty').innerHTML)*1;
 const botaoGeraSenha = document.querySelector('button');
 const telaAplicativo = document.getElementById('tela');
 const grupoCaracteres = document.querySelectorAll(".grupo__caracteres");
@@ -18,16 +17,19 @@ const formacaoSenha = [
         caracteres: "!#$%&*+-/<>?@[]^~"
     }
 ]
-const checkMaiusculas = document.getElementById("maiusculas");
-const checkMinusculas = document.getElementById("minusculas");
-const checkNumeros = document.getElementById("numeros");
-const checkSimbolos = document.getElementById("simbolos");
+let apoioSinal = 1;
 
+grupoCaracteres.forEach(grupo => {
+    grupo.addEventListener("click", () => {
+        
+    })
+})
 
-function opcaoSelecionadaPeloUsuario() {
-    
+function atualizaQuantidadeCaracteresSenha() {
+    let quantidade = document.getElementById("qty");
+    let valor = document.getElementById("quantidade__caracteres").value;
+    quantidade.innerHTML = valor;
 }
-
 
 function verificacaoSelecaoUsuario() {
     grupoCaracteres.forEach(grupo => {
@@ -38,8 +40,10 @@ function verificacaoSelecaoUsuario() {
 }
 
 function gerarSenha() {
+    verificacaoSelecaoUsuario();
     if(grupoCaracteresGerarSenha != "") {
-        for(let i=0; senhaUsuario.length < tamanhoSenha; i++) {
+        let quantidade = document.getElementById("qty").innerHTML;
+        for(let i=0; senhaUsuario.length < quantidade; i++) {
             let j = Math.floor(Math.random()*formacaoSenha.length);
             if(grupoCaracteresGerarSenha.includes(j)) {
                 let caracterAleatorio = formacaoSenha[j].caracteres[Math.floor(Math.random()*formacaoSenha[j].caracteres.length)];
@@ -70,5 +74,7 @@ function limpaTela() {
     senhaUsuario = "";
 }
 
-verificacaoSelecaoUsuario();
+
 executaAplicativo();
+atualizaQuantidadeCaracteresSenha();
+document.addEventListener("change", atualizaQuantidadeCaracteresSenha);

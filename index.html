@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./assets/style/reset.css">
         <link rel="stylesheet" href="./assets/style/style.css">
         <script src="password-gen.js" defer></script>
-        <title>Password Generator</title>
+        <title>Criador de Senhas</title>
     </head>
     <body>
         <header class="cabecalho__principal">
@@ -19,50 +19,50 @@
                 <aside class="texto__apresentacao">
                 </aside>
                 <article class="container__gerador--senhas">
-                        <p class="titulo__app">Gerador de Senhas</p>
+                        <p class="titulo__app">CRIADOR DE SENHA</p>
                         <div class="tela__impressao--copia__senha">
-                            <input type="text" id="tela" class="tela__impressao">
+                            <input type="text" id="tela" class="tela__impressao" required placeholder="Aqui será criada a sua senha!">
                         </div>
                         <div class="tamanho__rolamento">
                             <div class="configuracao__tamanho">
-                                <p class="texto__descricao--selecao">Tamanho Senha</p>
-                                <p class="representacao__numerica--quantidade__senha" id="qty">10</p>
+                                <p class="texto__descricao--selecao">TAMANHO SENHA</p>
+                                <p class="representacao__numerica--quantidade__senha" id="qty">.</p>
                             </div>
                             <span class="barra__rolamento">
-                                <input type="range" id="quantidade__caracteres" class="selecao__quantidade--caracteres">
+                                <input type="range" min="4" max="20" id="quantidade__caracteres" class="selecao__quantidade--caracteres" value="10">
                             </span>
                         </div>    
                         <form class="formulario_opcoes--senha">
                             <div class="container__opcoes">
                                 <label for="maicusculas" class="select__opcao">
                                     <input type="checkbox" id="maiusculas" class="grupo__caracteres" value="0">
-                                    Incluir Letras Maíusculas
+                                    LETRAS MAIÚSCULAS
                                 </label>
                                 <label for="minusculas" class="select__opcao">
                                     <input type="checkbox" id="minusculas" class="grupo__caracteres" value="1">
-                                    Incluir Letras Minusculas
+                                    LETRAS MINÚSCULAS
                                 </label>
                                 <label for="numeros" class="select__opcao">
                                     <input type="checkbox" id="numeros" class="grupo__caracteres" value="2">
-                                    Incluir Números
+                                    NÚMEROS
                                 </label>
                                 <label for="simbolos" class="select__opcao">
                                     <input type="checkbox" id="simbolos" class="grupo__caracteres" value="3">
-                                    Incluir Símbolos
+                                    SÍMBOLOS
                                 </label>
                             </div>
                         </form>
                         <div class="container__forca--senha">
-                            <p class="texto__forca--senha">Força da Senha</p>
+                            <p class="texto__forca--senha">SEGURANÇA</p>
                             <ul class="container__nivel--senha">
-                                <li class="sinal__forca--senha"></li>
-                                <li class="sinal__forca--senha"></li>
-                                <li class="sinal__forca--senha"></li>
-                                <li class="sinal__forca--senha"></li>
+                                <li class="sinal__forca"></li>
+                                <li class="sinal__forca"></li>
+                                <li class="sinal__forca"></li>
+                                <li class="sinal__forca"></li>
                             </ul>
                         </div>
                         <div class="area__botao">
-                            <button class="botao">Gerar senha</button>
+                            <button class="botao">CRIAR</button>
                         </div>
                 </article>
             </section>

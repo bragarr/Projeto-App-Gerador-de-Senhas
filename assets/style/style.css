@@ -1,15 +1,22 @@
 :root {
-    --cor-fundo-padrao: #dda509;
+    --cor-fundo-padrao: #dda509cc;
     --cor-fonte-padrao: #E5E7EB;
-    --fundo-app: #050538;
+    --fundo-app: #1e2020;
+    --fundo-alternativo: #dda509;
+    --fundo-contraste: #0e0d0d;
     --cor-nivel-max: rgb(4, 68, 4);
     --cor-nivel-med: #949411;
     --cor-nivel-wk: #5a0606;
 }
 
+@font-face {
+    font-family: 'courier';
+    src: url(../font/CourierPrime-Regular.ttf) format('truetype');
+}
+
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'courier', sans-serif;
 }
 
 .introducao {
@@ -30,8 +37,6 @@
 
 .container__gerador--senhas {
     text-align: center;
-    border: 2px solid black;
-    border-radius: 10px;
     background-color: var(--fundo-app);
     color: var(--cor-fonte-padrao);
 }
@@ -39,17 +44,27 @@
 .titulo__app {
     font-size: 18px;
     font-weight: 700;
+    padding: 20px 0;
+    color: var(--fundo-alternativo);
 }
 
 .tela__impressao {
-    font-size: 20px;
-    text-align: left;
+    font-size: 16px;
+    text-align: center;
     margin: 20px 40px;
+    color: var(--cor-nivel-med);
+    background-color: var(--fundo-contraste);
+    border: none;
+    user-select: none;
+    padding: 15px 60px;
+    
 }
 
 .tamanho__rolamento {
     padding: 30px 10px;
-    background-color: black;
+    background-color: var(--fundo-contraste);
+    color: var(--fundo-alternativo);
+    margin: 0 40px;
 }
 
 .configuracao__tamanho {
@@ -68,13 +83,28 @@
 }
 
 .selecao__quantidade--caracteres {
-    width: 260px;
+    -webkit-appearance: none;
+    background: var(--cor-fundo-padrao);
+    outline: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 9px;   
 }
 
+.selecao__quantidade--caracteres::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: var(--fundo-alternativo);
+    cursor: pointer;
+}
 
 .formulario_opcoes--senha {
     text-align: left;
     padding: 20px 10px;
+    margin: 0 26px;
 }
 
 .container__opcoes {
@@ -82,6 +112,7 @@
     flex-direction: column;
     font-size: 15px;
     font-weight: 700;
+    color: var(--fundo-alternativo);
 }
 
 .select__opcao {
@@ -99,11 +130,13 @@ label input {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
-    background-color: black;
+    background-color: var(--fundo-contraste);
+    margin: 0 40px;
 }
 
 .texto__forca--senha {
     font-size: 15px;
+    color: var(--fundo-alternativo);
 }
 
 .container__nivel--senha {
@@ -111,20 +144,27 @@ label input {
     flex-direction: row;
 }
 
-.sinal__forca--senha {
+.sinal__forca {
     padding: 10px 8px;
-    background-color: var(--cor-nivel-max);
+    background-color: var(--cor-fonte-padrao);
     cursor: pointer;
     list-style-type: none;
     margin: 6px 6px;
 }
 
+.desligado {
+    background-color: var(--cor-fonte-padrao);
+}
+
 .area__botao {
-    padding: 10px 10px;
+    padding: 20px 10px;
 }
 
 .botao {
     width: 240px;
     height: 40px;
     cursor: pointer;
+    background-color: var(--fundo-app);
+    color: var(--fundo-alternativo);
+    border: 2px solid var(--fundo-alternativo);
 }

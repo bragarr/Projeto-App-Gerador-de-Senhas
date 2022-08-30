@@ -35,9 +35,11 @@ Modo de Uso:
 A usabilidade do aplicativo é realizada da seguinte maneira:
 
 *Usuário deve escolher ao menos uma categória de caracter que gostaria de compor a sua senha:
-![image](https://user-images.githubusercontent.com/108424896/187553363-4780cb5f-3d82-4db9-a9a1-bdba038fca9d.png)
+
+![image](https://user-images.githubusercontent.com/108424896/187554748-85a7dabd-d916-4663-85ef-843c3042404a.png)
 
 *Após a escolha de combinação definida pelo usuário, deve ser feita a definição do tamanho da senha atrás da barra de rolamento:
+
 ![image](https://user-images.githubusercontent.com/108424896/187553535-cf6b8521-d706-4f78-a15a-1e8057374bc8.png)
 
 *Ao final basta clicar no botão "Criar" e a senha será gerada:

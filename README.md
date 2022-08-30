@@ -36,8 +36,10 @@ A usabilidade do aplicativo é realizada da seguinte maneira:
 ![image](https://user-images.githubusercontent.com/108424896/187553535-cf6b8521-d706-4f78-a15a-1e8057374bc8.png)
 
 *Ao final basta clicar no botão "Criar" e a senha será gerada:
+
 ![image](https://user-images.githubusercontent.com/108424896/187553782-02907e78-cc94-4655-9d34-63d70d751e95.png)
 
 Para comdiade do usuário foi inserido um botão para que o mesmo possa fazer seleção de cópia de texto da senha.
+
 ![image](https://user-images.githubusercontent.com/108424896/187553943-44a9e6bb-1c63-4006-b707-98726aa75b24.png)
 
